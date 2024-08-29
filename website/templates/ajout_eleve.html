@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Gestion des élèves{% endblock %}
+    
+{% block content %}
+    <div class="eleve">
+        <div class="elevemin"><h2>Élèves(2)</h2></div>
+        <a href="{% url 'eleve:add' %}" class="elevemin">
+            <h2>+ Nouvel élève</h2>
+        </a>
+    </div>
+    <div class="eleve1">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        
+                        <th>Genre</th>
+                        <th>Classe</th>
+                        <th>Matricule</th>
+                        <th>Age</th>
+                        <th>Telephone</th>
+                        <th>Ville</th>
+                        <th>Action</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for eleve in eleves %}
+                    <tr>
+                        
+                        <td>{{ eleve.last_name }}</td>
+                        <td>{{ eleve.first_name }}</td>
+                        <td>{{ eleve.gender }}</td> 
+                        <td>{{ eleve.scholarship }}</td> 
+                        <td>{{ eleve.matricula }}</td>
+                        <td>{{ eleve.age }}</td>
+                        <td>{{ eleve.phone }}</td>
+                        <td>{{ eleve.country }}</td>
+                        <td>
+                            <a href="{% url 'eleve:edit' eleve.id %}" class="btn-link">
+                                <button class="btn-modify">Modifier</button>
+                            </a>
+                            <a href="{% url 'eleve:delete' eleve.id %}" class="btn-link" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet eleve ?');">
+                                <button class="btn-delete">Supprimer</button>
+                            </a>
+                        </td>
+                        
+                                   
+                    </tr>
+                    {% empty %}
+                   
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+

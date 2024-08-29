@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} Utilisateur{% endblock %}
+
+{% block content %}
+
+        <div class="sidebar-container2">
+            <div class="eleve">
+                <div class="elevemin"><h2>Utilisateurs(2)</h2></div>
+                <div class="elevemin">
+                    <a href="{% url 'utilisateur:add' %}"><h2>+ Nouveau Utilisateur</h2></a>
+                </div>
+                
+            </div>
+            <div class="eleve1">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Pseudo</th>
+                                <th>Date de création</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                            <tr>
+                                <td>{{ user.pseudo_name }}</td>
+                                <td>{{ user.creat_at }}</td>
+                                <td>
+                                    <!-- Modifier -->
+                                    <a href="{% url 'utilisateur:edit' user.id %}" class="btn-link">
+                                        <button class="btn-modify">Modifier</button>
+                                    </a>
+                                    
+
+                                    <!-- Supprimer -->
+                                    <a href="{% url 'utilisateur:delete' user.id %}" class="btn-link" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?');">
+                                        <button class="btn-delete">Supprimer</button>
+                                    </a>
+                                    
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+            <div class="eleve2"></div>
+        </div>
+       
+
+    
+    {% endblock %}

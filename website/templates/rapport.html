@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Modifier professeur{% endblock %}
+
+{% block content %}
+
+
+        <div class="sidebar-container2">
+            
+            <div class="rapport-container">
+                <h2 id="rapport-title">Rapport</h2>
+                <form id="rapport-form">
+                    <div class="rapport-select-group">
+                        <label for="rapport-options"></label>
+                        <select id="rapport-options">
+                            <option value="" disabled selected>Sélectionner une option</option>
+                            <option value="eleves">Liste des élèves</option>
+                            <option value="professeurs">Liste des professeurs</option>
+                            <option value="utilisateurs">Liste des utilisateurs</option>
+                        </select>
+                    </div>
+                    <div id="rapport-button-group">
+                        <button type="button" id="rapport-pdf-button">Générer format PDF</button>
+                        <button type="button" id="rapport-excel-button">Générer format Excel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+       
+{% endblock %}

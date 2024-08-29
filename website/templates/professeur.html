@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %} Professeurs{% endblock %}
+
+{% block content %}
+        <div class="sidebar-container2">
+            <div class="eleve">
+                <div class="elevemin"><h2>Professeurs(2)</h2></div>
+                <a href="{% url 'professeur:add' %}" class="elevemin">
+                    <h2>+ Nouveau professeur</h2>
+                </a>
+                
+            </div>
+            <div class="eleve1">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénoms</th>
+                                <th>Matière</th>
+                                
+                                <th>Âge</th>
+                                <th>Téléphone</th>
+                                <th>Ville</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for professeur in professeurs %}
+                            <tr>
+                                <td>{{ professeur.name }}</td>
+                                <td>{{ professeur.last_name }}</td>
+                                <td>{{ professeur.courses }}</td>
+                                <td>{{ professeur.age }} </td>
+                                <td>{{ professeur.number }}</td>
+                                <td>{{ professeur.ville }}</td>
+                                
+                                
+                                <td>
+                                    <a href="{% url 'professeur:edit' professeur.id %}" class="btn-link">
+                                        <button class="btn-modify">Modifier</button>
+                                    </a>
+                                    
+                                    <a href="{% url 'professeur:delete' professeur.id %}" class="btn-link" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet professeur ?');">
+                                        <button class="btn-delete">Supprimer</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+            <div class="eleve2"></div>
+        </div>
+       
+   
+
+
+    {%endblock%}

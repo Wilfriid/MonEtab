@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %} dashbord{% endblock %}
+
+{% block content %}
+        <div class="sidebar-container2">
+            <div class="right1">
+                <h1>Tableau de bord</h1>
+            </div>
+            <div class="right2">
+                <div class="right2min">
+                    <div class="part1"> <h3>Nombre d'élève</h3></div>
+                    <div class="part2"> <h1>128 000</h1></div>
+                </div>
+                <div class="right2min">
+                    <div class="part1"> <h3>Nombre de professeur</h3></div>
+                    <div class="part2"> <h1>128 000</h1></div>
+                </div>
+            </div>
+            <!-- div -->
+             <div class="espace"></div>
+            <div class="right2">
+                <div class="right2min">
+                    <div class="part1"> <h3>Nombre d'utilisateur</h3></div>
+                    <div class="part2"> <h1>128 000</h1></div>
+                </div>
+                <div class="right2min">
+                    <div class="part1"> 
+                        <h3>Elève par genre</h3>
+                    </div>
+                    <div class="part2">
+                        <div class="legend">
+                            <div class="legend-item">
+                                <button class="color-button rose"></button>
+                                <span class="label">Femme</span>
+                            </div>
+                            <div class="legend-item">
+                                <button class="color-button bleu"></button>
+                                <span class="label">Homme</span>
+                            </div>
+                        </div>
+                       <div class="circle-container">
+                            <div class="circle"></div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} Professeurs{% endblock %}
+
+{% block content %}
+
+        <div class="sidebar-container2">
+            <div class="elevepage1">
+                <a href="{% url 'professeur:index' %}" class="elevepage1min">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>retour</span>
+                </a>
+                
+                <div class="elevepage1min2">
+                    <h2>Ajouter un  professeur </h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form }}  
+                        <button type="submit" name="enregistrer">Enregistrer</button>
+                        <button type="submit" name="annuler">Annuler</button>
+                    </form>
+                </div>
+                
+            </div>
+       
+{% endblock %}

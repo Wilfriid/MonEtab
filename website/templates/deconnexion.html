@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Déconnexion</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form class="logout-form">
+            <div class="logout-message">
+                <h2>Voulez-vous vraiment vous déconnecter ?</h2>
+            </div>
+            <div class="btn-group">
+                <!-- Lien vers la déconnexion -->
+                <a href="{% url 'connexion' %}" class="btn-logout">Oui, me déconnecter</a>
+                <!-- Lien pour annuler la déconnexion et retourner au tableau de bord -->
+                <a href="{% url 'dashbord' %}" class="btn-cancel">Annuler</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

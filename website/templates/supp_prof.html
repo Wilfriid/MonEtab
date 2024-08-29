@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %} Modifier professeur{% endblock %}
+
+{% block content %}
+
+
+        <div class="sidebar-container2">
+            <div class="eleve">
+                <div class="elevemin"><h2>Professeurs(2)</h2></div>
+                <div class="elevemin"><h2> + Nouveau professeur</h2></div>
+            </div>
+            <div class="eleve1">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénoms</th>
+                                <th>Matière</th>
+                                <th>Vacant</th>
+                                
+                                <th>Âge</th>
+                                <th>Téléphone</th>
+                                <th>Ville</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kouakou</td>
+                                <td>Gregoire</td>
+                                <td>Math</td>
+                                <td>Non</td>
+                               
+                                <td>40</td>
+                                <td>0123456789</td>
+                                <td>Touba</td>
+                                <td>
+                                    <button class="btn-modify">Modifier</button>
+                                    <button class="btn-delete">Supprimer</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Atta</td>
+                                <td>Flora</td>
+                                <td>Physique</td>
+                                <td>Oui</td>
+                               
+                                <td>37</td>
+                                <td>0987654321</td>
+                                <td>Bouaké</td>
+                                <td>
+                                    <button class="btn-modify">Modifier</button>
+                                    <button class="btn-delete">Supprimer</button>
+                                </td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="eleve2"></div>
+        </div>
+       
+
+{% endblock %}

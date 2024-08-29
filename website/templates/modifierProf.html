@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Modifier professeur{% endblock %}
+
+{% block content %}
+
+<div class="sidebar-container2">
+    <div class="elevepage1">
+        <a href="{% url 'professeur:index' %}" class="elevepage1min">
+            <i class="fas fa-arrow-left"></i>
+            <span>Retour</span>
+        </a>
+        
+        <div class="elevepage1min2">
+            <h2>Modifier un professeur - {{ professeur.id }}</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <div class="form-buttons">
+                    <a href="{% url 'professeur:index' %}" class="btn-cancel">Annuler</a>
+                    <button type="submit" class="btn-save">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock %}

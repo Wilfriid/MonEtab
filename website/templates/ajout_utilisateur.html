@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Modifier Utilisateur{% endblock %}
+
+{% block content %}
+
+        <div class="sidebar-container2">
+            <div class="utilisateur">
+                <a href="{% url 'utilisateur:index' %}" class="link-container">
+                    <div class="uti1">
+                        <i class="fas fa-arrow-left"></i> 
+                        <span>Retour</span>
+                    </div>
+                </a>
+                <div class="uti2">
+                    <div id="id_utilisateur-form-container">
+                        <h2 id="id_utilisateur-form-title">Ajouter utilisateurs</h2>
+                        <form id="id_utilisateur-form" method="post">
+                            {% csrf_token %}
+                            {{ form }}  
+                        
+                            <div id="id_utilisateur-button-group">
+                                <a href="{% url 'utilisateur:index' %}" id="id_utilisateur-cancel-button" class="btn-annuler">Annuler</a>
+                                <button type="submit" id="id_utilisateur-submit-button">Enregistrer</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+       
+        {% endblock %}
+

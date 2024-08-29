@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}ajouter un eleve{% endblock %}
+
+{% block content %}
+
+
+    <div class="sidebar-container2">
+        <div class="elevepage1">
+            <div class="elevepage1min">
+                <a href="{% url 'eleve:index' %}" class="elevepage1min">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>retour</span>
+                </a>
+            </div>
+            <div class="elevepage1min2">
+                <h2>Modifier l'eleve - 245</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <div class="form-buttons">
+                        <a href="{% url 'eleve:index' %}" class="btn-cancel">Annuler</a>
+                        <button type="submit" class="btn-save">Enregistrer</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

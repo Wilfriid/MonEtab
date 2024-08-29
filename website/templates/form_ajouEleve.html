@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}ajouter un eleve{% endblock %}
+
+{% block content %}
+<div class="elevepage1">
+    <a href="{% url 'eleve:index' %}" class="elevepage1min">
+        <i class="fas fa-arrow-left"></i>
+        <span>Retour</span>
+    </a>
+
+    <div class="elevepage1min2">
+        <h2>Ajouter un élève</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" name="enregistrer">Enregistrer</button>
+            <a href="{% url 'eleve:index' %}" class="btn-cancel">Annuler</a>
+        </form>
+        
+        
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,601 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #717171; /* Fond gris */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-connexion {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #717171; /* Couleur de fond du bouton */
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.container-img img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 200px; /* Ajuster selon la taille de votre image */
+}
+
+/* ecran2*/
+.sidebar-container{
+    width: 100%;
+    height: 600px;
+    background-color: #e8e5e5;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-container1{
+    width: 20%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sidebar1 {
+    width: 100%;
+    height: 10%;
+    background-image: url("/static/img/Cap2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.sidebar3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.side1{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar2{
+    width: 100%;
+    height: 80%;
+    /* border: 2px solid green; */
+    border-right:2px solid gray;
+}
+
+.sidebar3{
+    width: 90%;
+    height: 10%;
+    /* border-top: 2px solid gray; */
+    /* border-right:2px solid gray; */
+}
+/* Styles pour l'icône et le texte à l'intérieur de .side1 */
+.side1 i, .side1 span {
+    color: #000; /* Couleur par défaut */
+    transition: color 0.3s ease;
+}
+
+/* Changement de couleur au survol */
+.side1:hover {
+    background-color: #e0e0e0; /* Couleur de fond au survol */
+}
+
+.side1:hover i, .side1:hover span {
+    color: blue; /* Couleur des icônes et texte au survol */
+}
+
+/* Contenu à droite */
+.sidebar-container2 {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    
+
+.right1{
+    width: 100%;
+    height: 10%;
+
+}
+
+.right2{
+    width: 100%;
+    height: 40%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.right2min{
+    width: 40%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.espace{
+    width: 100%;
+    height: 10px;
+}
+
+.part1{
+    width: 100%;
+    height: 10%;
+    
+}
+.part2{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-container {
+    
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.circle {
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid black; /* Contour noir du cercle */
+    clip-path: circle(50% at 50% 50%);
+    background: conic-gradient(
+        #e8e5e5 0% 43%,  /* Couleur pour "Femme" (130 degrés) */
+        #717171 43% 100% /* Couleur pour "Homme" */
+    );
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.color-button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: default;
+}
+
+.rose {
+    background-color: #e8e5e5; 
+}
+
+.bleu {
+    background-color: #717171;   
+}
+
+
+
+/* eleve */
+.eleve{
+    width: 90%;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eleve1{
+    width: 90%;
+    height: 22%;
+    border:2px solid black;
+}
+.eleve2{
+    width: 90%;
+    height: 55%;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #717171;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-modify {
+    background-color: #c78c3f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.btn-modify:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-delete:hover {
+    background-color: #e53935;
+}
+
+/* ecran4 */
+.elevepage1 {
+    width: 90%;
+    height: 80%;
+    /* border: 2px solid blue; */
+}
+.elevepage1min {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: flex-end;
+    height: 10%;
+    /* border: 2px solid blue; */
+}
+
+.elevepage1min2 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    border-radius: 8px;
+}
+
+.elevepage1min2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    width: 48%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-radio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-radio label {
+    margin-left: 5px;
+    color: #333;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    background-color: #d9534f; /* Rouge pour annuler */
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-save {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    background-color: #5cb85c; /* Vert pour enregistrer */
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #c9302c;
+}
+
+.btn-save:hover {
+    background-color: #4cae4c;
+}
+
+/* ecran7 */
+.elevemin a {
+    text-decoration: none;
+    color: inherit; /* Conserve la couleur du texte actuelle */
+}
+
+.elevemin a h2 {
+    margin: 0; /* Évite les marges supplémentaires du titre */
+}
+
+
+/* ecran12 */
+
+.utilisateur{
+    width: 100%;
+    height: 70%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.uti1{
+    width: 90%;
+    height: 10%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+.uti2{
+    width: 50%;
+    /* height: 50%; */
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+
+}
+
+#id_utilisateur-form-container {
+    /* background-color: #fff; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Augmentez cette valeur pour rendre le formulaire plus large */
+    text-align: center;
+}
+
+#id_utilisateur-form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.id_utilisateur-input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.id_utilisateur-input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.id_utilisateur-input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#id_utilisateur-button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#id_utilisateur-cancel-button, #id_utilisateur-submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#id_utilisateur-cancel-button {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+#id_utilisateur-submit-button {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+#id_utilisateur-cancel-button:hover {
+    background-color: #c9302c;
+}
+
+#id_utilisateur-submit-button:hover {
+    background-color: #4cae4c;
+}
+
+/* ecran 14 */
+.rapport-container {
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#rapport-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#rapport-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rapport-select-group {
+    margin-right: 20px;
+}
+
+#rapport-options {
+    padding: 10px;
+    font-size: 16px;
+   
+    border-radius: 5px;
+}
+
+#rapport-button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+#rapport-pdf-button, #rapport-excel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#rapport-pdf-button {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+#rapport-excel-button {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+#rapport-pdf-button:hover {
+    background-color: #c9302c;
+}
+
+#rapport-excel-button:hover {
+    background-color: #4cae4c;
+}
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar-container">
+        <div class="sidebar-container1">
+            <div class="sidebar1"></div> <!-- ok -->
+            <div class="sidebar2">
+                <div class="side1">
+                    <a href="{% url 'dashbord:index' %}" class="side1">
+                        <i class="fas fa-tachometer-alt" style="font-size: 24px; margin-right: 10px;"></i> 
+                        <span style="font-size: 16px;">Tableau de bord</span>
+                    </a>
+                </div>
+                <a href="{% url 'eleve:index' %}" class="side1">
+                    <i class="fas fa-user-graduate"></i> <!-- Icône pour "Élève" -->
+                    <span>Élèves</span>
+                </a>
+                <a href="{% url 'professeur:index' %}" class="side1">
+                    <i class="fas fa-chalkboard-teacher"></i> <!-- Icône pour "Professeur" -->
+                    <span>Professeurs</span>
+                </a>
+                <a href="{% url 'utilisateur:index' %}" class="side1">
+                    <i class="fas fa-users"></i> <!-- Icône pour "Utilisateur" -->
+                    <span>Utilisateurs</span>
+                </a>
+                <a href="{% url 'rapport:index' %}" class="side1">
+                    <i class="fas fa-file-alt"></i> <!-- Icône pour "Rapport" -->
+                    <span>Rapports</span>
+                </a>
+            </div>
+            <div class="sidebar3">
+                <i class="fas fa-sign-out-alt"></i> <!-- Icône pour "Déconnexion" -->
+                <span>Déconnexion</span>
+            </div>
+        </div>
+
+        <div class="sidebar-container2">
+            {% block content %}
+            <!-- Le contenu spécifique à chaque page sera inséré ici -->
+            {% endblock %}
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
